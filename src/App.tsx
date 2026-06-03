@@ -71,8 +71,8 @@ export function App() {
 
       {/* 夸夸邀请函 */}
       <WeddingInvitation
-        groomName="水水大王"
-        brideName="小猪宝"
+        groomName="小猪宝"
+        brideName="水水大王"
         date="2026.06.03"
         weekday="星期三"
         time="全 · 天 · 候"
