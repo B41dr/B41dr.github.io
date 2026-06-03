@@ -7,7 +7,6 @@ import {
   Divider,
   Footer,
   Modal,
-  Phone,
   Radio,
   Switch,
   Tabs,
@@ -16,6 +15,7 @@ import {
   WeddingInvitation,
 } from 'animal-island-ui';
 
+import { Phone, type Reward } from './components/Phone';
 import { Icon } from './icons/Icon';
 
 const QUOTES = [
@@ -47,6 +47,7 @@ export function App() {
   const [punch, setPunch] = useState<Array<string | number>>(['water', 'smile']);
   const [unlimited, setUnlimited] = useState(true);
   const [mood, setMood] = useState<string | number>('hyper');
+  const [reward, setReward] = useState<Reward | null>(null);
 
   const nextQuote = () => setQuoteIdx((i) => (i + 1) % QUOTES.length);
 
@@ -71,7 +72,7 @@ export function App() {
       {/* 夸夸邀请函 */}
       <WeddingInvitation
         groomName="水水大王"
-        brideName="你 (是滴就是你)"
+        brideName="小猪宝"
         date="2026.06.03"
         weekday="星期三"
         time="全 · 天 · 候"
@@ -384,9 +385,7 @@ export function App() {
             全是夸夸 App，一个都不准卸载
             <Icon name="sparkle" size={14} color="#9050d0" />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Phone />
-          </div>
+          <Phone onAppClick={setReward} />
           <div
             style={{
               textAlign: 'center',
@@ -472,6 +471,36 @@ export function App() {
           （记得喝水。本大王在看着呢
           <Icon name="eye" size={14} color="#11a89b" />）
         </span>
+      </Modal>
+
+      <Modal
+        open={reward !== null}
+        title={
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, justifyContent: 'center' }}>
+            <Icon name="sparkle" size={18} color="#f5c31c" />
+            许愿成功！
+            <Icon name="sparkle" size={18} color="#f5c31c" />
+          </span>
+        }
+        typewriter={false}
+        onClose={() => setReward(null)}
+        onOk={() => setReward(null)}
+        footer={
+          <Button type="primary" size="middle" onClick={() => setReward(null)}>
+            收下啦，谢谢大王！
+          </Button>
+        }
+      >
+        {reward && (
+          <div className="reward-pop">
+            <div className="disc" style={{ background: reward.discBg }}>
+              <Icon name={reward.icon} size={42} color={reward.iconColor} />
+            </div>
+            <div className="from">来自「{reward.from}」</div>
+            <div className="name">{reward.name}</div>
+            <div className="flavor">{reward.flavor}</div>
+          </div>
+        )}
       </Modal>
     </div>
   );
