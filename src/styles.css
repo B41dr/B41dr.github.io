@@ -1,0 +1,255 @@
+/* 页面级布局样式 —— 组件样式由 animal-island-ui/style 提供 */
+
+.stage {
+  max-width: 414px;
+  margin: 0 auto;
+  padding: 20px 14px 32px;
+  position: relative;
+}
+
+.floating-dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(25, 200, 185, 0.06) 1.4px, transparent 1.4px),
+    radial-gradient(circle, rgba(247, 205, 103, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px, 18px 18px;
+  background-position: 0 0, 9px 9px;
+  z-index: 0;
+}
+
+.stage > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 自定义图标(33 个手绘版)的 hover 抖动,真库 Icon 不含这些 */
+.i-bounce {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.i-bounce:hover {
+  animation: iconBounceCustom 0.45s ease-in-out;
+}
+@keyframes iconBounceCustom {
+  0%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+}
+
+/* =========================================================
+ *  Header / Section
+ * =======================================================*/
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.header-row .badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #fff;
+  background: #fc736d;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.section {
+  margin-top: 22px;
+}
+.section-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+.section-title.small {
+  font-size: 14px;
+}
+.section-sub {
+  text-align: center;
+  color: #9f927d;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  margin-bottom: 14px;
+}
+
+/* =========================================================
+ *  Stats
+ * =======================================================*/
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.stat .num {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat .lbl {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.stat .bar {
+  margin-top: 10px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.stat .bar > i {
+  display: block;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+}
+.stat.warm .bar > i {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================================
+ *  Quote
+ * =======================================================*/
+.quote-card {
+  position: relative;
+}
+.quote-card .quotemark {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-size: 38px;
+  color: rgba(25, 200, 185, 0.7);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+.quote-card .quotemark.r {
+  left: auto;
+  right: 16px;
+  top: auto;
+  bottom: -28px;
+  transform: rotate(180deg);
+}
+.quote-card .quote {
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 600;
+  color: #794f27;
+  text-align: center;
+  padding: 6px 4px 2px;
+}
+.quote-card .sig {
+  margin-top: 14px;
+  text-align: right;
+  font-size: 12px;
+  color: #9f927d;
+  letter-spacing: 0.06em;
+}
+
+/* =========================================================
+ *  Actions / Preference / Pills
+ * =======================================================*/
+.action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.preference-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+}
+.preference-card .label-block {
+  flex: 1;
+}
+.preference-card .label-block .l1 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #794f27;
+}
+.preference-card .label-block .l2 {
+  font-size: 12px;
+  color: #9f927d;
+  margin-top: 2px;
+}
+
+.pill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(25, 200, 185, 0.14);
+  color: #11a89b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.pill svg {
+  vertical-align: middle;
+}
+.pill.pink {
+  background: rgba(248, 166, 178, 0.22);
+  color: #c44a64;
+}
+.pill.yellow {
+  background: rgba(247, 205, 103, 0.3);
+  color: #8a6010;
+}
+.pill.blue {
+  background: rgba(136, 157, 240, 0.22);
+  color: #4054b2;
+}
+
+.gear-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+  color: #794f27;
+  font-weight: 600;
+  font-size: 13px;
+}
+.gear-row span {
+  font-weight: 500;
+  color: #725d42;
+}
+.ck-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signature {
+  margin-top: 16px;
+  text-align: center;
+  color: #9f927d;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.hr-soft {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(114, 93, 66, 0.18), transparent);
+  margin: 14px 0;
+}

@@ -1,105 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baldr</title>
-  <style>
-    :root {
-      --bg: #0d1117;
-      --fg: #e6edf3;
-      --muted: #8b949e;
-      --accent: #58a6ff;
-      --card: #161b22;
-      --border: #30363d;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(1200px 600px at 50% -10%, #1b2433 0%, var(--bg) 60%);
-      color: var(--fg);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-      padding: 24px;
-    }
-    .card {
-      width: 100%;
-      max-width: 480px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px 32px;
-      text-align: center;
-      animation: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    h1 {
-      font-size: 32px;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-    .handle {
-      color: var(--accent);
-      font-size: 15px;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
-    .bio {
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 8px;
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 28px;
-    }
-    .links {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .links a {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 20px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--fg);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: border-color 0.2s, background 0.2s, transform 0.1s;
-    }
-    .links a:hover {
-      border-color: var(--accent);
-      background: #1f2733;
-    }
-    .links a:active { transform: scale(0.97); }
-    footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-  </style>
-</head>
-<body>
-  <main class="card">
-    <h1>Baldr</h1>
-    <div class="handle">@B41dr</div>
-    <p class="bio">wu~</p>
-    <p class="meta">MiniMax · Beijing, China</p>
-    <nav class="links">
-      <a href="https://github.com/B41dr" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-    <footer>Hosted on GitHub Pages</footer>
-  </main>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>夸夸水水大王 · 一日通行卡</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
