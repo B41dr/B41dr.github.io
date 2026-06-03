@@ -35,7 +35,7 @@ const APPS: PhoneApp[] = [
     icon: 'icon-camera',
     badge: true,
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '拍立得 50 张相纸',
       flavor: '一整盒拍立得相纸，把每个开心瞬间都印出来收藏。',
       icon: 'icon-camera',
@@ -51,7 +51,7 @@ const APPS: PhoneApp[] = [
     iconColor: '#fff',
     icon: 'icon-chat',
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '一周奶茶自由',
       flavor: '每天一杯，三分糖去冰多珍珠，已记下你的口味。',
       icon: 'milktea',
@@ -67,7 +67,7 @@ const APPS: PhoneApp[] = [
     iconColor: '#725d42',
     icon: 'icon-critterpedia',
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '一大束当季鲜花',
       flavor: '挑了你最爱的颜色，愿你天天像花一样新鲜好看。',
       icon: 'leaf',
@@ -84,7 +84,7 @@ const APPS: PhoneApp[] = [
     icon: 'icon-diy',
     badge: true,
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '助眠香薰蜡烛',
       flavor: '点上它，今晚好好睡一觉，明天又是元气满满的你。',
       icon: 'flame',
@@ -100,7 +100,7 @@ const APPS: PhoneApp[] = [
     iconColor: '#fff',
     icon: 'milktea',
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '手作小蛋糕',
       flavor: '不为什么，就想让你尝点甜的，今天也要开心呀。',
       icon: 'heart',
@@ -116,7 +116,7 @@ const APPS: PhoneApp[] = [
     iconColor: '#fff',
     icon: 'icon-variant',
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '一套漂亮新衣',
       flavor: '换上它，今天走路都自带 BGM，美美地出门吧。',
       icon: 'star',
@@ -132,7 +132,7 @@ const APPS: PhoneApp[] = [
     iconColor: '#fff',
     icon: 'icon-design',
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '滋润护手霜',
       flavor: '天冷了，记得涂手手；照顾好自己这件事，我很认真。',
       icon: 'drop',
@@ -149,7 +149,7 @@ const APPS: PhoneApp[] = [
     icon: 'icon-map',
     badge: true,
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '两张电影票',
       flavor: '挑部你想看的，找个人一起，好好放松一个晚上。',
       icon: 'pin',
@@ -165,7 +165,7 @@ const APPS: PhoneApp[] = [
     iconColor: '#3d5a1a',
     icon: 'megaphone',
     reward: {
-      from: '水水大王',
+      from: '小猪宝',
       name: '一封手写信',
       flavor: '把想对你说的话都写下来了，慢慢拆、慢慢看。',
       icon: 'heart',
